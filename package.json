@@ -1,0 +1,42 @@
+{
+  "name": "sms-management-application-api",
+  "version": "1.0.0",
+  "description": "an application for tracking sms",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint",
+    "test": "jest",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgatana/SMS-management-application-API.git"
+  },
+  "author": "gatana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sgatana/SMS-management-application-API/issues"
+  },
+  "homepage": "https://github.com/sgatana/SMS-management-application-API#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "eslint": "^5.14.1",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koajs-cors": "^1.0.9",
+    "nodemon": "^1.18.10",
+    "pg": "^7.8.1",
+    "pg-hstore": "^2.3.2",
+    "prettier": "^1.16.4",
+    "pushid": "^1.0.0",
+    "sequelize": "^4.42.1"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-flowtype": "^3.4.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1"
+  }
+}
