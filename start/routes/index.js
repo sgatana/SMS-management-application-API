@@ -1,15 +1,22 @@
 const Router = require('koa-router')
+const {BASE_URL} = require('../../lib/helpers/constants')
 const ContactController = require('../../controllers/ContactController')
 const MessageController = require('../../controllers/MessageController')
-const routes = new Router()
+const routes = new Router({
+  prefix: BASE_URL
+})
 
-routes.post('/api/contacts', ContactController.createContact)
-routes.get('/api/contacts/:id', ContactController.getContact)
+routes.post('/contacts', ContactController.createContact)
+routes.get('/contacts/:id', ContactController.getContact)
+routes.delete('/contacts/:phoneNumber', ContactController.deleteContact)
 
 
-routes.post('/api/messages', MessageController.createMessage)
-routes.get('/api/messages', MessageController.getAllMessages)
-routes.get('/api/messages/:id/sent', MessageController.getSentMessages)
+
+routes.post('/messages/:contactId/sms', MessageController.createMessage)
+routes.get('/messages', MessageController.getAllMessages)
+routes.get('/messages/:contactId/sent', MessageController.getSentMessages)
+routes.get('/messages/:contactId/received', MessageController.getReceivedMessages)
+
 
 
 module.exports = routes
