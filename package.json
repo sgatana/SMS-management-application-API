@@ -19,8 +19,11 @@
   },
   "homepage": "https://github.com/sgatana/SMS-management-application-API#readme",
   "dependencies": {
+    "@koa/cors": "2",
+    "cors": "^2.8.5",
     "dotenv": "^6.2.0",
     "eslint": "^5.14.1",
+    "jest": "^24.1.0",
     "joi": "^14.3.1",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",

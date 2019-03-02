@@ -5,7 +5,8 @@ const development = {
     password: process.env.DB_PWD,
     database: process.env.DEV_DB,
     host: process.env.DB_HOST,
-    dialect: process.env.DIALECT
+    dialect: process.env.DIALECT,
+    logging: false
   }
 
 const test = {
@@ -13,7 +14,8 @@ const test = {
   password: process.env.DB_PWD,
   database: process.env.TEST_DB,
   host: process.env.DB_HOST,
-  dialect: process.env.DIALECT
+  dialect: process.env.DIALECT,
+  logging: false
   }
 
 const production = {
@@ -21,7 +23,8 @@ const production = {
   password: process.env.DB_PWD,
   database: process.env.PROD_DB,
   host: process.env.DB_HOST,
-  dialect: process.env.DIALECT
+  dialect: process.env.DIALECT,
+  logging: false
   }
 
 module.exports =  {
