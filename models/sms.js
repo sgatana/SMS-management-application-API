@@ -16,6 +16,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       field: 'receiver_id'
     },
+    status: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true
+    },
     createdAt: {
       type: DataTypes.DATE,
       field: 'created_at'

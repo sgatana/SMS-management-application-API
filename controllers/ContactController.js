@@ -9,7 +9,7 @@ class ContactController {
       if (error) {
         ctx.status = 400
         ctx.body = {
-          error: `validation error, please enter correct name and phone number`
+          error: `please enter correct name and phone number should have at least 10 charaters`
         }
         return
       }
@@ -25,10 +25,24 @@ class ContactController {
       }
     }
   }
+  static async listContacts(ctx) {
+    try {
+      const contacts = await ContactRepository.listContacts(ctx.db)
+      ctx.status = 200
+      ctx.body = {
+        contacts
+      }
+    } catch (error) {
+      ctx.body = {
+        error: error.message
+      }
+      ctx.status = error.status || 400
+    }
+  }
   static async getContact(ctx) {
     try {
       const { params } = ctx
-      const contact = await ContactRepository.getContact(ctx.db, params.id)
+      const contact = await ContactRepository.getContact(ctx.db, params.contactId)
       ctx.status = 200
       ctx.body = {
         contact

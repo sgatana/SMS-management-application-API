@@ -30,6 +30,9 @@ module.exports = {
         onDelete: 'cascade',
         onUpdate: 'cascade',
       },
+      status: {
+        type: Sequelize.STRING,
+      },
       createdAt: {
         type: Sequelize.DATE,
         field: 'created_at'
