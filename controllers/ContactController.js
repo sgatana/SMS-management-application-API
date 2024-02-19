@@ -9,7 +9,7 @@ class ContactController {
       if (error) {
         ctx.status = 400
         ctx.body = {
-          error: `please enter correct name and phone number should have at least 10 charaters`
+          error: `enter valid name and phone number`
         }
         return
       }
